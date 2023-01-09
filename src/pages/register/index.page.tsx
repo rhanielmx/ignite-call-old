@@ -25,6 +25,8 @@ const registerFormSchema = z.object({
 type RegisterFormData = z.infer<typeof registerFormSchema>
 
 export default function Register() {
+  const router = useRouter()
+
   const {
     register,
     handleSubmit,
@@ -33,8 +35,6 @@ export default function Register() {
   } = useForm<RegisterFormData>({
     resolver: zodResolver(registerFormSchema),
   })
-
-  const router = useRouter()
 
   useEffect(() => {
     if (router.query.username) {
