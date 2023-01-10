@@ -52,7 +52,6 @@ export default function ConnectCalendar() {
             permissões de acesso ao google calendar.
           </AuthError>
         )}
-
         <Button
           type="submit"
           disabled={!isSignedIn}
